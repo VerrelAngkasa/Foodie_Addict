@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Web Basic Programming</title>
+
+    <!-- External Style Sheet-->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Gooogle Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <script src="index.js"></script>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <p>Foodie <br> Addict</p>
+            </div>
+            <nav class="nav-list">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#makanan">Foods</a></li>
+                    <li><a href="#minuman">Drinks</a></li>
+                    <li><a href="#aboutus">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="home">
+            <div class="left-info">
+                <h1>Foodie Addict</h1>
+                <p>Explore a culinary adventure where every dish is crafted with passion, and <br>
+                    every drink is a refreshing escape from all over Indonesia. <br>
+                    From farm-fresh ingredients to bold, local flavors, we bring you all informations <br>
+                    that excites the palate and warms the soul. Dive into every bite and sip!
+                </p>
+                <button type="submit" class="btnExplore" onclick="openPopUp()">Let's Explore!</button>
+                <div class="popup" id="popup">
+                    <img src="assets/warning.png" alt="Warning">
+                    <h2>Warning!</h2>
+                    <p>This site contains sensitive contents for those who are hungry!</p>
+                    <button type="button" class="btnhungry" onclick="closePopUp()">I'm hungry!</button>
+                </div>
+
+                <script>
+                    let popup = document.getElementById("popup");
+
+                    function openPopUp() {
+                        popup.classList.add("open-popup");
+                    }
+
+                    function closePopUp() {
+                        popup.classList.remove("open-popup");
+                    }
+                </script>
+            </div>
+            <div class="right-info">
+                <img src="assets/food.avif" alt="Food">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="content">
+            <article id="makanan">
+                <div class="most">
+                    <h2>Most Popular <span class="highlight">Foods</span></h2>
+                    <p>by Foodie Addict, September 2024</p>
+                </div>
+                <div class="row">
+                    <div class="foods card miegor">
+                        <h3><span class="hashtag">#2</span> Mie Goreng</h3>
+                        <img src="assets/miegoreng.jpg" alt="Mie Goreng">
+                        <p class="desc">Indonesian stir-fried noodles,
+                            often prepared <br>with sweet soy sauce, garlic, shallots,
+                            vegetables, <br>and a choice of chicken, beef, or shrimp.
+                            <span class="highlight">Sweet <br>and savory</span> with a smoky undertone <br>from the wok
+                            cooking.
+                        </p>
+                        <p class="price">Price Range: IDR 15 - 30K</p>
+                    </div>
+
+                    <div class="foods card nasgor">
+                        <h3><span class="hashtag">#1</span> Nasi Goreng</h3>
+                        <img src="assets/nasgor.jpeg" alt="Nasi Goreng">
+                        <p class="desc">Indonesia’s <span class="highlight">famous fried rice dish</span>, often cooked
+                            <br>with
+                            sweet soy sauce, garlic, shallots, chili, <br>
+                            and typically served with a fried egg on top.
+                        </p>
+                        <p class="price">Price Range: IDR 10 - 25K</p>
+                    </div>
+
+                    <div class="foods card sate">
+                        <h3><span class="hashtag">#3</span> Sate Padang</h3>
+                        <img src="assets/sate.jpg" alt="Sate Padang">
+                        <p class="desc"><span class="highlight">Grilled skewers of marinated meat</span>, can be
+                            <br>made from chicken, beef, lamb, or goat,
+                            and <br>sometimes includes intestines or other offals.
+                        </p>
+                        <p class="price">Price Range: IDR 15 - 25K</p>
+                    </div>
+                </div>
+            </article>
+
+            <hr>
+
+            <article id="minuman">
+                <div class="most">
+                    <h2>Most Popular <span class="highlight">Drinks</span></h2>
+                    <p>by Foodie Addict, September 2024</p>
+                </div>
+                <div class="row">
+                    <div class="drinks card jamu">
+                        <h3><span class="hashtag">#2</span> Jamu</h3>
+                        <img src="assets/jamu.jpg" alt="Jamu">
+                        <p class="desc"><span class="highlight">A traditional herbal drink </span>made from natural
+                            <br>ingredients like turmeric, ginger, tamarind,<br>
+                            lemongrass, and other herbs. Known for its <br>health benefits, particularly for boosting
+                            immunity, <br>improving digestion, and
+                            reducing inflammation.
+                        </p>
+                        <p class="price">Price Range: IDR 3 - 10K</p>
+                    </div>
+
+                    <div class="drinks card cendol">
+                        <h3><span class="hashtag">#1</span> Es Cendol</h3>
+                        <img src="assets/cendol.webp" alt="Es Cendol">
+                        <p class="desc">A refreshing iced dessert drink made with <br>green rice flour jelly, coconut
+                            milk, and <br>palm
+                            sugar syrup. It has a sweet <br>and slightly savory flavor with <br><span
+                                class="highlight">a hint of pandan aroma</span>.
+                        </p>
+                        <p class="price">Price Range: IDR 10 - 20K</p>
+                    </div>
+
+                    <div class="drinks card luwak">
+                        <h3><span class="hashtag">#3</span> Kopi Luwak</h3>
+                        <img src="assets/kopi.jpg" alt="Kopi Luwak">
+                        <p class="desc">Known as one of the most famous coffees <br>in the world,
+                            this coffee is made from beans <br>that have been <span class="highlight">eaten and excreted
+                                by civet cats</span>,<br>
+                            giving it a unique flavor. It is known for its <br>smooth, rich, and less bitter taste.
+                        </p>
+                        <p class="price">Price Range: IDR 10 - 25K</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="find">
+            <h4>Find Us Here</h4>
+            <div>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+        </div>
+
+        <aside>
+            <article id="aboutus">
+                <h4>Foodie Addict</h4>
+                <p><a href="https://www.linkedin.com/in/verrel-angkasa-4b398723b/">Published by Verrel Angkasa</a></p>
+                <p>Foodie Addict &copy; 2024</p>
+                <img src="assets/verrel.jpg" alt="Verrel Angkasa">
+            </article>
+        </aside>
+
+        <div class="menu">
+            <h4>Menu</h4>
+            <div class="menulist">
+                <a href="#home">Home</a>
+                <a href="#makanan">Foods</a>
+                <a href="#minuman">Drinks</a>
+                <a href="#aboutus">About Us</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
